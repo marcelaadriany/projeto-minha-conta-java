@@ -27,8 +27,15 @@ public class Application {
    * Req. 4 – Creates CLI menu.
    */
   public void run() {
-    String[] menuOptions = {"1 - Cadastrar cliente", "2 - Cadastrar endereço do cliente", "3 - Cadastrar dispositivos do endereço", "4 - Estimar conta de energia do endereço", "5 - Otimizar conta de energia do endereço", "6 - Sair"
+    String[] menuOptions = {
+      "1 - Cadastrar cliente",
+      "2 - Cadastrar imóvel do cliente",
+      "3 - Cadastrar dispositivos do endereço",
+      "4 - Estimar conta de energia do endereço",
+      "5 - Otimizar conta de energia do endereço",
+      "6 - Sair",
     };
+
     char options;
     do {
       options = ui.inputMenuOption(menuOptions);
