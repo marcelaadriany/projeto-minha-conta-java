@@ -1,7 +1,7 @@
 package com.betrybe.minhaconta.business;
 
-import com.ions.lightdealer.sdk.model.ElectronicDevice;
 import com.ions.lightdealer.sdk.model.Address;
+import com.ions.lightdealer.sdk.model.ElectronicDevice;
 
 /**
  * The type Energy bill.
@@ -21,7 +21,10 @@ public class EnergyBill {
    * Req. 2 – Calculates an adjusted tariff for non-residential plans.
    */
   public double adjustedTariff(double value) {
-    return 0d;
+    if (!residentialPlan) {
+      return value * 1.2;
+    }
+    return value;
   }
 
   /**
