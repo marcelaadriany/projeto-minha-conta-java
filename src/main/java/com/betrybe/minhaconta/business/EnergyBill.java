@@ -17,6 +17,7 @@ public class EnergyBill {
     this.address = address;
     this.residentialPlan = residentialPlan;
   }
+
   /**
    * Req. 2 – Calculates an adjusted tariff for non-residential plans.
    */
