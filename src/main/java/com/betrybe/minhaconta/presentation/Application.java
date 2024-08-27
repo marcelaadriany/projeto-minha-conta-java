@@ -1,6 +1,9 @@
 package com.betrybe.minhaconta.presentation;
 
 import com.betrybe.minhaconta.business.EnergyAccount;
+import com.betrybe.minhaconta.business.EnergyBill;
+import com.ions.lightdealer.sdk.model.Address;
+import com.ions.lightdealer.sdk.model.Client;
 import com.ions.lightdealer.sdk.model.ElectronicDevice;
 import com.ions.lightdealer.sdk.service.LightDealerApi;
 
@@ -24,6 +27,19 @@ public class Application {
    * Req. 4 – Creates CLI menu.
    */
   public void run() {
+    String[] menuOptions = {
+            "1 - Cadastrar cliente",
+            "2 - Cadastrar endereço do cliente",
+            "3 - Cadastrar dispositivos do endereço",
+            "4 - Estimar conta de energia do endereço",
+            "5 - Otimizar conta de energia do endereço",
+            "6 - Sair"
+    };
+    char options;
+    do {
+      options = ui.inputMenuOption(menuOptions);
+      runOptionAction(options);
+    } while (options != '6');
   }
 
   /**
