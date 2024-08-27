@@ -1,7 +1,7 @@
 package com.betrybe.minhaconta.business;
 
-import com.ions.lightdealer.sdk.model.Address;
 import com.ions.lightdealer.sdk.model.ElectronicDevice;
+import com.ions.lightdealer.sdk.model.Address;
 
 /**
  * The type Energy bill.
@@ -11,12 +11,11 @@ public class EnergyBill {
 
   protected Address address;
   protected boolean residentialPlan;
-  protected  double rate;
+  protected  double rate = 0.15;
 
   public  EnergyBill(Address address, boolean residentialPlan) {
     this.address = address;
     this.residentialPlan = residentialPlan;
-    this.rate = 0.15;
   }
   /**
    * Req. 2 – Calculates an adjusted tariff for non-residential plans.
